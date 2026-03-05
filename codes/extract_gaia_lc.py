@@ -16,13 +16,13 @@ ids=data['source_id'].values
 new_ids=[]
 
 for source_id in tqdm.tqdm(ids):
-    path='/idia/users/princy/project_obj_btw_MS_WD/gaia_lightcurves/%d.csv'%(source_id)
+    path='gaia_lightcurves/%d.csv'%(source_id)
 
     if os.path.exists(path)==False:
         new_ids.append(source_id)
 
 for source_id in tqdm.tqdm(new_ids):
-    path='/idia/users/princy/project_obj_btw_MS_WD/gaia_lightcurves/%d.csv'%(source_id)
+    path='gaia_lightcurves/%d.csv'%(source_id)
 
     lc=Gaia.load_data([source_id],data_release='Gaia DR3',data_structure='INDIVIDUAL',retrieval_type='EPOCH_PHOTOMETRY',valid_data=True,format='fits'
                              )
