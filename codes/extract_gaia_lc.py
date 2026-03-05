@@ -7,7 +7,7 @@ import tqdm
 
 Gaia.login(user='username', password='***********')
 
-data=pd.read_csv("/idia/users/princy/project_obj_btw_MS_WD/paper3_data/ms_wd_targets_summary_stat.csv")
+data=pd.read_csv("ms_wd_targets_summary_stat.csv")
 
 
 data=data[(data['num_selected_g_fov']>24)&(data['num_selected_bp']>24)&(data['num_selected_rp']>24)]
